@@ -1,0 +1,7 @@
+Julio;Velasquez;14.497.503;37;0412-7718346;velasquez.julio@gmail.com;
+Paola;Rodriguez;17.087.078;31;0426-0648114;rodriguezr.paola@gmail.com;
+Carmen;Basabe;4.016.724;69;0261-7617462;carmenbasabe@hotmail.com;
+Lino;Velasquez;11.608.927;42;0426-6648240;linovelasquez@hotmail.com;
+Ricardo;Velasquez;7.874.252;49;0414-1183778;ricardovelasquezb@hotmail.com;
+Jacqueline;Velasquez;8.754.788;47;0414-6618970;jacquevelasquez@hotmail.com;
+Henry;Leon;18.625.204;26;0416-4614396;helg18@gmail.com;
