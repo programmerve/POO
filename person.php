@@ -1,9 +1,9 @@
 <?php
-
 /*
 Program to learning PHP and practice POO
 Definition of parent class person
 */
+include("db_conection.php")
 
 class person
 {
@@ -86,20 +86,44 @@ class person
 
 	public function store_file() {
 		//Store the person's information to a file
-		$string = $this->fname.";";
-		$string .= $this->lname.";";
-		$string .= $this->id.";";
-		$string .= $this->age.";";
-		$string .= $this->phone.";";
-		$string .= $this->email.";";
-		$string .= "\n";
+		
 		//echo $string;
-		$file = fopen("personinfo.txt", "a");
-		fwrite($file, $string);
+		$file = fopen("personinfo.txt", "a";
+		or die("ERROR: Fail creating or opening the file");
+		if ($file) {
+			$string = $this->fname.";";
+			$string .= $this->lname.";";
+			$string .= $this->id.";";
+			$string .= $this->age.";";
+			$string .= $this->phone.";";
+			$string .= $this->email.";";
+			$string .= "\n";
+			fwrite($file, $string);
+			fclose($file);
+		}
 	}
 
 	public function store_db() {
 		//Store the person's information to a database
+		$file = fopen("personinfo.txt", "r");
+		or die("ERROR: Fail reading the file");
+		if ($file) {
+			# code...
+			try {
+    			$conn = new PDO("mysql:host=$srv;dbname=$db", $usr, $pw);
+    			// set the PDO error mode to exception
+    			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    			//echo "Connected successfully";
+    		}
+			catch(PDOException $e) {
+    			echo "Connection failed: ".$e->getMessage();
+    		}
+			while (!feof($file)) {
+				# code...
+				$line = fgets($file);
+				
+			}
+		}
 	}
 
 	public function __destruct() {

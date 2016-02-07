@@ -1,10 +1,8 @@
 <?php
-//Set conection data to the database
-$srv = "";
-$db = "";
-$usr = "";
-$pw = "";
-
-
+//Set connection data to the database
+$srv = "localhost";
+$db = "myowndb";
+$usr = "root";
+$pw = "mysql79";
 
 ?>
